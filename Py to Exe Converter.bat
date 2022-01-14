@@ -59,7 +59,16 @@ mkdir %foldername%
 timeout /t 1 >nul
 move %filename% %foldername%
 timeout /t 1 >nul
+cd %foldername%
 timeout /t 1 >nul
 PyInstaller --onefile --noconsole %filename%
-pause
+echo.
+echo Succesfully build exe file for %filename%!
+timeout /t 2 >nul
+echo Closing in 3...
+timeout /t 1 >nul
+echo Closing in 2...
+timeout /t 1 >nul
+echo Closing in 1...
+timeout /t 1 >nul
 exit
